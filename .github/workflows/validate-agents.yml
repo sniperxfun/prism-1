@@ -1,0 +1,32 @@
+name: Validate Agent Files
+
+on:
+  pull_request:
+    paths:
+      - 'agents/**/*.md'
+  push:
+    branches: [main]
+    paths:
+      - 'agents/**/*.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate PRISM Agent Spec
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate agent frontmatter
+        run: python .github/scripts/validate_agents.py
+
+      - name: Check required sections
+        run: python .github/scripts/check_sections.py
