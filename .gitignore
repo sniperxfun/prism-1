@@ -40,3 +40,8 @@ logs/
 .pytest_cache/
 htmlcov/
 .coverage
+
+# Node.js / Website
+node_modules/
+website/node_modules/
+.manus-logs/
