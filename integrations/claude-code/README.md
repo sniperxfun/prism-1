@@ -24,10 +24,10 @@ Edit `~/.claude/mcp_settings.json`:
 
 ```bash
 # Option A: Clone into your project
-git submodule add https://github.com/your-org/prism.git .prism
+git submodule add https://github.com/prism-agentic/prism.git .prism
 
 # Option B: Clone separately and reference by path
-git clone https://github.com/your-org/prism.git ~/prism
+git clone https://github.com/prism-agentic/prism.git ~/prism
 ```
 
 ### 3. Create a CLAUDE.md in your project root

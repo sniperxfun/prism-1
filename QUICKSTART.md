@@ -51,7 +51,7 @@ Copy the contents of any agent file and paste it as a system prompt. The agent's
 
 ```bash
 # Clone PRISM
-git clone https://github.com/your-org/prism.git
+git clone https://github.com/prism-agentic/prism.git
 cd prism
 
 # Install Python dependencies
